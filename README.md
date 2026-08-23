@@ -40,6 +40,7 @@ sitting in an undetected oscillator, which looks worse.
 ```
 life-cube/            <- repo root; run arduino-cli from here
   README.md
+  LICENSE
   life_cube/
     life_cube.ino     <- the whole sketch, no other source files
     preview.png
@@ -52,10 +53,11 @@ itself can be cloned under any name without breaking the build.
 ## Requirements
 
 - **Hardware:** Waveshare ESP32-C5-LCD-1.47. No wiring — the panel, backlight
-  and RGB LED pins are hard-coded to the onboard ones.
+  and onboard WS2812 pins are hard-coded to the board's own.
 - **`esp32:esp32` Arduino core >= 3.3.11** — that release adds the `esp32c5`
   target. `arduino-cli core install esp32:esp32`.
-- **Arduino_GFX (`GFX Library for Arduino`) 1.6.5+**, either route below.
+- **Arduino_GFX (`GFX Library for Arduino`) 1.6.5** — the version this is
+  built and verified against; either route below.
 - [`arduino-cli`](https://arduino.github.io/arduino-cli/) — everything here is
   CLI, but the sketch builds fine from the Arduino IDE too.
 
@@ -228,3 +230,10 @@ periodically wants the same one-liner.
 | `SEED_DENSITY_PCT` | Initial live fraction. |
 | `HASH_RING_LEN` | Cycle-detection depth (12) — catches oscillators up to that period. |
 | `STAGNATION_HOLD_MS` | How long the final state stays up, still spinning, before reseeding. |
+
+## License
+
+MIT — see [LICENSE](LICENSE). Display and WS2812 pin assignments follow the
+Apache-2.0 licensed [Waveshare board
+repo](https://github.com/waveshareteam/esp32-c5-lcd-1.47); Arduino_GFX is
+BSD-licensed and is not vendored here.
