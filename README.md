@@ -10,6 +10,8 @@ three axes and bounces around the screen, on the
 *(Host-rendered preview, using the same projection, shading and palette math as
 the sketch. Each panel shows a different hue, as if each were a fresh reseed.)*
 
+**[Video: the cube running on the board](https://youtu.be/m2hgfxZ1nVk)**
+
 ## What it does
 
 - **Life on a closed surface.** The six 12x12 faces are one connected 864-cell
